@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  django_test:
+    build: .
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: web
+    volumes:
+      - .:/opt/django_test
+    ports:
+      - "9000:8000"
+    depends_on:
+      - db
+
+volumes:
+  pgdata:
