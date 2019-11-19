@@ -16,7 +16,7 @@ case "$1" in
         echo ">> filling DB"
         echo ">> filling DB COMPLETED"
         echo ">> STARTING SERVER..."
-        exec python3.7 manage.py runserver 0.0.0.0:8000
+        exec python3.7 manage.py runserver 0.0.0.0:9000
     ;;
 
     *)

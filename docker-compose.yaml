@@ -5,7 +5,7 @@ services:
   db:
     image: postgres
     ports:
-      - "5432:5432"
+      - "5444:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
 
@@ -17,7 +17,7 @@ services:
     volumes:
       - .:/opt/django_test
     ports:
-      - "9000:8000"
+      - "9000:9000"
     depends_on:
       - db
 
