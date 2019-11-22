@@ -13,9 +13,7 @@ case "$1" in
         echo ">> RUN MARGOSYS"
         python3.7 manage.py migrate
         echo ">> migrate COMPLETED"
-        echo ">> filling DB"
-        echo ">> filling DB COMPLETED"
-        echo ">> STARTING SERVER..."
+        echo ">> TEST STARTING SERVER...TESTTESTTEST"
         exec python3.7 manage.py runserver 0.0.0.0:9000
     ;;
 

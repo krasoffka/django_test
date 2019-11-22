@@ -30,6 +30,6 @@ router.register(r'positions', PositionViewSet, basename='Position')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('contact/', include('contact.urls')),
-    path('test/', include('test.urls')),
+    path('test/', include('test.api.urls')),
     path('', include(router.urls)),
 ]
